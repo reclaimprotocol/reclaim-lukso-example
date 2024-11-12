@@ -53,18 +53,10 @@ function App() {
       "for acmecorp.com on 1st january"
     );
 
-    await reclaimClient.buildProofRequest(providerId, true, "V2Linking");
-
-    reclaimClient.setSignature(
-      await reclaimClient.generateSignature(
-        // this is an MVP, you should not generate the signature on the frontend
-        "0x5bdaf747ad9333898a0d9cb613f499d0b00164d7b8230628cf7ffa30fd323372" //TODO : replace with your APP_SECRET
-      )
-    );
-
-    const { requestUrl } = await reclaimClient.createVerificationRequest();
-
-    setUrl(requestUrl);
+    const url = await reclaimProofRequest.getRequestUrl();
+    setRequestUrl(url);
+    const status = reclaimProofRequest.getStatusUrl();
+    setStatusUrl(status);
 
     await reclaimProofRequest.startSession({
       onSuccessCallback: (proof) => {
