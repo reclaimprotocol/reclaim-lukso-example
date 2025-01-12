@@ -27,7 +27,7 @@ cd reclaim-lukso-example
 
 Run this command:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 ### 3. Code Configuration
 
@@ -68,7 +68,7 @@ After configuration, you can run the project locally to test the proof verificat
 
 Run this command:
 ```bash
-npm run dev
+npm run start
 ```
 1. **Connect Wallet**: Ensure your wallet is connected and set to the correct network.
 2. **Request Proof**: Click the "Create Claim QR Code" button to generate a QR code for proof submission.

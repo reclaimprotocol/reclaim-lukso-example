@@ -21,7 +21,7 @@ export default function VerifyProof(props) {
         onClick={async () => {
           const hash = await writeContract(config, {
             abi: abi,
-            address: "0x93a9d327836A5279E835EF3147ac1fb54FBd726B", //TODO : replace with your Reclaim contract's address
+            address: "0xB68aCB36334311CEc471EE2541173EDc155FdA71", //TODO : replace with your Reclaim contract's address
             functionName: "verifyProof",
             chainId: 4201, //TODO : replace with your chain id 4201 for Testnet 42 For Mainnet
             args: [proof],
