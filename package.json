@@ -13,7 +13,7 @@
     "react-qr-code": "^2.0.14",
     "react-scripts": "5.0.1",
     "viem": "^2.15.1",
-    "wagmi": "^2.10.2",
+    "wagmi": "^3.7.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
